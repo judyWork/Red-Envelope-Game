@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>Red Envelope Game</title>
+<link rel="stylesheet" href="all.css">
+<link rel="stylesheet" href="tsf.css">
+<script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+<script src="./red.js"></script>
+</head>
+<body>
+<!-- 紅包 -->
+
+<div class="container">
+    <div class="imge">
+        <a href="https://judywork.github.io/Games_Lobby/"></a>
+        <div class="bg">
+            <div class="red"><!-- shake-chunk -->
+                <span style="background-image: url(img/red-g.png);"></span>
+                <button class="redbutton" type="button" id="hovertreeOpen"></button>
+                <div class="red-jg">
+                    <h1 id="hwqKey">123</h1>
+                    <h5 id="hwqValue">456</h5>
+                </div>
+            </div>
+            <div class="t-btn">
+                <button id="hewenqiAgain ">再抽一次</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"> -->
+
+
+</div>
+    <script>
+        function hoverTreeRandom(n) {
+            return Math.floor(Math.random() * n + 1)
+        }
+        var hovertreePrize = new Array();
+        hovertreePrize[0] = { "key": "恭喜您：", "value": "獲得100金幣" };
+        hovertreePrize[1] = { "key": "恭喜您：", "value": "獲得200金幣" };
+        hovertreePrize[2] = { "key": "恭喜您：", "value": "獲得300金幣" };
+        hovertreePrize[3] = { "key": "恭喜您：", "value": "獲得400金幣" };
+        hovertreePrize[4] = { "key": "恭喜您：", "value": "獲得500金幣" };
+        hovertreePrize[4] = { "key": "恭喜您：", "value": "獲得600金幣" };
+
+        var h_index = 0;
+        document.getElementById("hove"+"rtreeOpen").addEventListener("click", function () {
+            h_index = hoverTreeRandom(hovertreePrize.length)-1;
+            //把得獎印到畫面上
+            document.getElementById("hwqKey").innerText = hovertreePrize[h_index].key;
+            document.getElementById("hwqValue").innerText = hovertreePrize[h_index].value;
+        })
+        document.getElementById("hewenqiAgain").addEventListener("click", function () {
+            location = "index.html";
+        })
+    </script>
+</body>
+</html>
