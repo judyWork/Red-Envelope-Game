@@ -5,16 +5,17 @@
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <title>Red Envelope Game</title>
-<link rel="stylesheet" href="all.css">
 <link rel="stylesheet" href="tsf.css">
+<link rel="stylesheet" href="all.css">
 <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
 <script src="./red.js"></script>
 </head>
 <body>
-<!-- 紅包 -->
 
+<!-- 紅包 -->
 <div class="container">
     <div class="imge">
+        <a href="https://judywork.github.io/Games_Lobby/"></a>
         <div class="bg">
             <div class="red"><!-- shake-chunk -->
                 <span style="background-image: url(img/red-g.png);"></span>
@@ -45,7 +46,7 @@
         hovertreePrize[2] = { "key": "恭喜您：", "value": "獲得300金幣" };
         hovertreePrize[3] = { "key": "恭喜您：", "value": "獲得400金幣" };
         hovertreePrize[4] = { "key": "恭喜您：", "value": "獲得500金幣" };
-        hovertreePrize[4] = { "key": "恭喜您：", "value": "獲得600金幣" };
+        hovertreePrize[5] = { "key": "恭喜您：", "value": "獲得600金幣" };
 
         var h_index = 0;
         document.getElementById("hove"+"rtreeOpen").addEventListener("click", function () {
@@ -55,6 +56,7 @@
             document.getElementById("hwqValue").innerText = hovertreePrize[h_index].value;
         })
         document.getElementById("hewenqiAgain").addEventListener("click", function () {
+            // location = "index.html"
             location = "https://judywork.github.io/Red-Envelope-Game/";
         })
     </script>
